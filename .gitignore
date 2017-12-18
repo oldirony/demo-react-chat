@@ -33,4 +33,4 @@ bower_components/
 
 dist/
 
-vendor/web-sdk.js
+#vendor/web-sdk.js
