@@ -9,7 +9,6 @@ $theme-color: #37B8AF;
 }
 
 .widget-container {
-    background: white;
     position: absolute;
     display: flex;
     flex-flow: column nowrap;
@@ -28,16 +27,15 @@ $theme-color: #37B8AF;
     }
 
     &.normal {
-        position: fixed;
+        position: static;
         width: 350px;
         bottom: 10px;
         height: 500px;
+        flex: 1 1 auto;
         right: 10px;
-        border-radius: 10px;
         box-sizing: border-box;
-        border: 1px solid #e8e8e8;
         overflow: hidden;
-        box-shadow: 0 5px 40px rgba(0,0,0,.16);
+        //box-shadow: 0 5px 40px rgba(0,0,0,.16);
     }
 
     &.docked {
@@ -51,11 +49,11 @@ $theme-color: #37B8AF;
     }
 
     &:not(.visible) {
-        animation: widget-hide .5s backwards;
+        animation: widget-hide .25s backwards;
     }
 
     &.visible {
-        animation: widget-show .5s forwards;
+        animation: widget-show .25s forwards;
     }
 }
 
@@ -101,7 +99,8 @@ svg {
 }
 
 .input-container {
-    background-color: #FFFFFF;
+    background-color: transparent;
+    color: #fff;
     flex-shrink: 0;
     z-index: 999;
 
@@ -126,11 +125,12 @@ svg {
 .input {
     border-style: none;
     height: 48px;
-    font-size: 13px;
     padding: 0 10px;
     font-size: 14px;
     outline-width: 0;
     flex-grow: 1;
+    background: none;
+    color: #fff;
 
     &:focus::placeholder {
         color: transparent;
@@ -176,7 +176,7 @@ svg {
     flex-grow: 1;
     flex-shrink: 1;
     padding: 16px 16px 0 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .chat-msg-container {
@@ -405,6 +405,7 @@ svg {
         height: 32px;
         padding: 0 10px;
         font-size: 14px;
+        background: none;
     }
 
     textarea {
@@ -417,6 +418,7 @@ svg {
         resize: none;
         font-size: 14px;
         overflow-y: auto;
+        background: none;
     }
 
     .button-send {
@@ -489,7 +491,7 @@ svg {
   1% {
     visibility: visible;
     opacity: 0;
-    transform: translateY(50%);
+    transform: translateY(5%);
   }
   100% {
     visibility: visible;
@@ -504,7 +506,7 @@ svg {
   }
   99% {
     opacity: 0;
-    transform: translateY(50%);
+    transform: translateY(5%);
   }
   100% {
     visibility: hidden;
@@ -553,7 +555,7 @@ svg {
     height: 100%;
     display: flex;
     align-items: center;
-    background: white;
+    background: #333;
     transition: visibility 500ms, opacity 500ms;
     visibility: hidden;
     opacity: 0;

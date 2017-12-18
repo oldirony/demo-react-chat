@@ -1,8 +1,8 @@
 {
-  "name": "chat-web-sdk-react-sample",
+  "name": "SCOL - demo chat",
   "private": true,
   "version": "0.0.1",
-  "description": "Zopim Web SDK Sample App (React)",
+  "description": "SDK Sample App (React)",
   "main": "",
   "scripts": {
     "clean": "rimraf dist/*",

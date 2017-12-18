@@ -248,10 +248,6 @@ class App extends Component {
     return (
       <div className="index">
         <div className={`widget-container ${this.getTheme()} ${this.getVisibilityClass()}`}>
-          <StatusContainer
-            accountStatus={this.props.data.account_status}
-            minimizeOnClick={this.minimizeOnClick}
-          />
           <MessageList
             isChatting={this.props.data.is_chatting}
             isOffline={isOffline}
