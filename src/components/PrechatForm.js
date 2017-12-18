@@ -26,8 +26,8 @@ class PrechatForm extends Component {
     if (!msg) return;
 
     zChat.setVisitorInfo({
-      display_name: this.refs.name.value,
-      email: this.refs.email.value
+      name: 'John Doe',
+      email: 'myuser@useruser.com',
     }, (err) => {
       if (err) return;
 
@@ -50,14 +50,6 @@ class PrechatForm extends Component {
       <form key="not-sent" className="offline-form">
         <div className="content">
           <div className="section">
-            <label className="label">Name</label>
-            <input ref="name" />
-          </div>
-          <div className="section">
-            <label className="label">Email</label>
-            <input ref="email" />
-          </div>
-          <div className="section">
             <label className="label">Message</label>
             <textarea ref="message" />
           </div>
@@ -75,7 +67,7 @@ class PrechatForm extends Component {
 
   render() {
     return (
-      <CardContainer title="Introduce yourself!" addClass="offline-card" contentAddClass={this.state.sent ? 'sent' : ''} icon={ <MessageSvg /> }>
+      <CardContainer title="Start a chat" addClass="offline-card" contentAddClass={this.state.sent ? 'sent' : ''} icon={ <MessageSvg /> }>
         {this.renderChild()}
       </CardContainer>
     );

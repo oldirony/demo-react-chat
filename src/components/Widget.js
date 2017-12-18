@@ -247,7 +247,7 @@ class App extends Component {
 
     return (
       <div className="index">
-        <div className={`widget-container ${this.getTheme()} ${this.getVisibilityClass()}`}>
+        <div className={`widget-container ${this.getTheme()} visible`}>
           <MessageList
             isChatting={this.props.data.is_chatting}
             isOffline={isOffline}
@@ -267,7 +267,6 @@ class App extends Component {
             onFileUpload={this.handleFileUpload}
           />
         </div>
-        <ChatButton addClass={this.getVisibilityClass()} onClick={this.chatButtonOnClick} />
       </div>
     );
   }

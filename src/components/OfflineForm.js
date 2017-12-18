@@ -21,8 +21,8 @@ class OfflineForm extends Component {
   send(event) {
     event.preventDefault();
     zChat.sendOfflineMsg({
-      name: this.refs.name.value,
-      email: this.refs.email.value,
+      name: 'My name',
+      email: 'myuser@useruser.com',
       message: this.refs.message.value
     }, (err) => {
       if (err) return;
@@ -55,14 +55,6 @@ class OfflineForm extends Component {
       return (
         <form key="not-sent" className="offline-form">
           <div className="content">
-            <div className="section">
-              <label className="label">Name</label>
-              <input ref="name" />
-            </div>
-            <div className="section">
-              <label className="label">Email</label>
-              <input ref="email" />
-            </div>
             <div className="section">
               <label className="label">Message</label>
               <textarea ref="message" />
