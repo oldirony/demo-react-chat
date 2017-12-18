@@ -1,1 +1,1 @@
-# Demo React shell
+# Demo React chat
